@@ -53,6 +53,15 @@ print(list(nt.transpose(old_list, new_shape)))
 
 Output: `[['A'], ['B', 'C'], ['D', ['E', 'F']]]`
 
+#### Get the shape list from a nested list
+
+```python
+l = [['A'], ['B', 'C'], ['D', ['E', 'F']]]
+print(list(nt.to_shape(l)))
+```
+
+Output: `[[0], [1, 2], [3, [4, 5]]]`
+
 #### Convert all iterables to list
 
 ```python
