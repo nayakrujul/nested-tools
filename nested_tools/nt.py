@@ -27,10 +27,10 @@ def transpose(lst, shape):
         else:
             yield list(transpose(lst, i))
 
-def convert_all(lst, exclude=(str,)):
+def convert_all(lst, to=list, exclude=(str,)):
     for item in lst:
         if hasattr(item, '__iter__') and not isinstance(item, exclude):
-            yield to(convert_all(item))
+            yield to(convert_all(item, to, exclude))
         else:
             yield item
             
