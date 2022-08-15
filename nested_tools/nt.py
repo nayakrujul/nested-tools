@@ -26,6 +26,15 @@ def transpose(lst, shape):
             yield lst[i]
         else:
             yield list(transpose(lst, i))
+            
+def to_shape(lst, i=0):
+    for item in lst:
+        if isinstance(item, (list, tuple)):
+            yield list(to_shape(item, i))
+            i += len(item)
+        else:
+            yield i
+            i += 1
 
 def convert_all(lst, to=list, exclude=(str,)):
     for item in lst:
