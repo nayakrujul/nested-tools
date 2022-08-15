@@ -1,19 +1,18 @@
 from setuptools import setup, find_packages
 
-long_description = 'A file-based version of SQL for the command line.'
+long_description = 'Tools for nested lists!'
 
 setup(
-  name = 'badsql-tools',
-  version = '5.1',
+  name = 'nestedtools',
+  version = '0.1',
   license='Apache',
-  description = 'SQL but worse for the command line',
+  description = 'Tools for nested lists!',
   author = 'Rujul Nayak',
   author_email = 'rujulnayak@outlook.com',
-  url = 'https://github.com/nayakrujul/badsql-tools',
-  download_url = 'https://github.com/nayakrujul/badsql-tools/archive/refs/tags/v_01.tar.gz',
-  keywords = ['database', 'SQL', 'file'],
+  url = 'https://github.com/nayakrujul/nested-tools',
+  download_url = 'https://github.com/nayakrujul/nested-tools/archive/refs/tags/v_01.tar.gz',
+  keywords = ['nested', 'list', 'tools'],
   install_requires=[
-          'badsql'
       ],
   classifiers=[
     'Development Status :: 3 - Alpha', 
@@ -30,14 +29,5 @@ setup(
   ],
   long_description=long_description,
   long_description_content_type='text/x-rst',
-  packages = find_packages(),
-  entry_points ={
-            'console_scripts': [
-                'badsql_mkdb = badsql_tools.badsql_tools:mkdb',
-                'badsql_insertrow = badsql_tools.badsql_tools:insertrow',
-                'badsql_select = badsql_tools.badsql_tools:select',
-                'badsql_display = badsql_tools.badsql_tools:display',
-                'badsql_removerow = badsql_tools.badsql_tools:removerow',
-            ]
-  }
+  packages = find_packages()
 )
