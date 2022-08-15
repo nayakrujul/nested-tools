@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+nested_tools/__init__.py
+nested_tools/nt.py
+nestedtools.egg-info/PKG-INFO
+nestedtools.egg-info/SOURCES.txt
+nestedtools.egg-info/dependency_links.txt
+nestedtools.egg-info/top_level.txt

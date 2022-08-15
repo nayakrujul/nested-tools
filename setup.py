@@ -4,7 +4,7 @@ long_description = 'Tools for nested lists!'
 
 setup(
   name = 'nestedtools',
-  version = '0.1',
+  version = '0.2',
   license='Apache',
   description = 'Tools for nested lists!',
   author = 'Rujul Nayak',
