@@ -61,3 +61,23 @@ print(list(nt.convert_all(l)))
 ```
 
 Output: `[[1, 2, [3]], [4, [5], [6]]]`
+
+**`convert_all` takes two more optional parameters**
+
+* `to` - a type to convert to (default = `list`):
+
+```python
+l = [{1, 2, (3,)}, [4, {5}, (6,)]]
+print(tuple(nt.convert_all(l, tuple)))
+```
+
+Output: `((1, 2, (3,)), (4, (5,), (6,)))`
+
+* `exclude` - a tuple of any iterable types to not convert (default = `(str,)`):
+
+```python
+l = [{1, 2, (3,)}, [4, {5}, (6,)]]
+print(list(nt.convert_all(l, exclude=(set,))))
+```
+
+Output: `[{1, 2, [3]}, [4, {5}, [6]]]
