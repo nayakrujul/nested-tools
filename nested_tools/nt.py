@@ -36,6 +36,11 @@ def to_shape(lst, i=0):
             yield i
             i += 1
 
+def make_same_shape(lst1, lst2):
+    flat = flatten(lst1)
+    shape = to_shape(lst2)
+    return transpose(list(flat), list(shape))
+
 def convert_all(lst, to=list, exclude=(str,)):
     for item in lst:
         if hasattr(item, '__iter__') and not isinstance(item, exclude):
