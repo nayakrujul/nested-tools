@@ -62,6 +62,16 @@ print(list(nt.to_shape(l)))
 
 Output: `[[0], [1, 2], [3, [4, 5]]]`
 
+#### Make one nested list the same shape as another
+
+```python
+a = [['foo', 'bar'], 'baz']
+b = ['A', ['B', ['C']]]
+print(list(nt.make_same_shape(a, b)))
+```
+
+Output: `['foo', ['bar', ['baz']]]`
+
 #### Convert all iterables to list
 
 ```python
